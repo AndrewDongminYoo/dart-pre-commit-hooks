@@ -1,6 +1,8 @@
 - id: run-build-runner
   name: Run Build Runner
-  entry: dart run build_runner build --delete-conflicting-outputs
+  entry: dart run build_runner build
+  args:
+    - --delete-conflicting-outputs
   language: system
   types: [dart]
   require_serial: true
@@ -12,19 +14,23 @@
   require_serial: true
 - id: run-dart-import-sorter
   name: Run Dart Import Sorter
-  entry: dart run import_sorter:main -e
+  entry: dart run import_sorter:main
+  args:
+    - -e
   language: system
   types: [dart]
   require_serial: true
 - id: run-dart-fix
   name: Run Dart Fix
-  entry: dart fix --apply
+  entry: dart fix
+  args:
+   - --apply
   language: system
   types: [dart]
   require_serial: true
 - id: run-dart-formatter
   name: Run Dart Formatter
-  entry: dart run import_sorter:main -e
+  entry: dart format lib
   language: system
   types: [dart]
   require_serial: true
