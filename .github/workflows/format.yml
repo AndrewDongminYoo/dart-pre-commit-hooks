@@ -1,0 +1,29 @@
+name: format
+
+on:
+  - push
+  - pull_request
+
+permissions: read-all
+jobs:
+  dart_format:
+    runs-on: ubuntu-latest
+    container:
+      image: google/dart:latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run format
+        run: dart format .
+
+  import_sorter:
+    runs-on: ubuntu-latest
+    container:
+      image: google/dart:latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run import_sorter
+        run: |
+          pub get
+          dart run import_sorter:main -e

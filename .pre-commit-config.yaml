@@ -1,0 +1,9 @@
+repos:
+  - repo: .
+    rev: main
+    hooks:
+      - id: run-build-runner
+      - id: generate-localization-file
+      - id: run-dart-import-sorter
+      - id: run-dart-fix
+      - id: run-dart-formatter
