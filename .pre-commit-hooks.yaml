@@ -1,11 +1,10 @@
-- id: dart-format
-  name: Format Dart Code
-  entry: format
-  language: script
-  files: \.dart$
-
-- id: dart-analyze
-  name: Analyze Dart Code
-  entry: analyze
-  language: script
-  files: \.dart$
+-   id: dart-format
+    name: Format Dart Code
+    entry: run1
+    language: script
+    files: \.dart$
+-   id: dart-analyze
+    name: Analyze Dart Code
+    entry: run2
+    language: script
+    files: \.dart$
