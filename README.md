@@ -23,7 +23,7 @@
       rev: main
       hooks:
         - id: dart-format
-        # id: flutter-analyze is also available. It executes flutter analyze.
+        # id: dart-analyze is also available. It executes dart analyze.
     ```
 
     (Optional) Run `pre-commit autoupdate` for using the latest version (commit SHA) of this repo.
@@ -54,8 +54,8 @@ You can also include/exclude some files (defaults to only `.dart`, is a pattern)
   rev: main
   hooks:
     - id: dart-format
-      files: lib/* # Only format source files (default is ".dart")
-      exclude: lib/gen/l10n/app_localizations_ko.dart # Exclude utils
+      files: lib/* # Only format source files (default is ".dart", valid python regex pattern)
+      exclude: lib/gen/l10n # Exclude localizations files
       args: [--line-length=100] # Pass --line-length=100 parameter to dart format
 ```
 

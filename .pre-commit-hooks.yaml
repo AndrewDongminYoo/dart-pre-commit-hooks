@@ -4,8 +4,8 @@
   language: script
   files: \.dart$
 
-- id: flutter-analyze
-  name: Analyze Flutter Code
+- id: dart-analyze
+  name: Analyze Dart Code
   entry: analyze
   language: script
   files: \.dart$
